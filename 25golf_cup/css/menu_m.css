@@ -1,0 +1,94 @@
+
+/* Overlay style */
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,170,204,1);	
+	z-index: 9999;
+	
+}
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+	display:block;
+	width: 8%;
+	height: 8%;
+	position: absolute;
+	right: 3%;
+	top: 5%;
+	overflow: hidden;
+	border: none;
+	background: url(../images/cross.png) no-repeat center center;	
+	text-indent: 200%;
+	color: transparent;
+	outline: none;
+	z-index: 999;
+	background-size: 100%;
+}
+
+/* Menu style */
+.overlay nav {
+	display:block;
+	width:100%;
+	text-align: center;
+	position: relative;
+	top: 0vh;
+	height: 90vh;
+	/* -webkit-transform: translateY(-50%);
+	transform: translateY(-50%); */
+	z-index:70;
+	background: none;
+	overflow: auto;
+}
+
+.overlay ul {
+	font-family:"微軟正黑體", "新細明體", "標楷體", Arial, "Arial Black";
+	display: block;
+	width:70%;
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	font-size: 1.5rem;
+	color: #666;
+	text-align: left;
+	height: 90%;
+	position: relative;
+	background:none;
+}
+
+
+
+
+.overlay ul li .menu_titlpic_m{ 
+	width:2rem; height:auto;  margin: 0.5rem; vertical-align: middle; float: left;
+}
+
+.overlay ul a:hover li,
+.overlay ul a:focus li  {	
+	
+}
+
+/* Effects */
+.overlay-slidedown {
+	visibility: hidden;
+	-webkit-transform: translateX(-100%);
+	transform: translateX(-100%);
+	-webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+	transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+	z-index:998;
+}
+
+.overlay-slidedown.open {
+	visibility: visible;
+	-webkit-transform: translateX(0%);
+	transform: translateX(0%);
+	-webkit-transition: -webkit-transform 0.4s ease-in-out;
+	transition: transform 0.4s ease-in-out;
+}
+
+
+
+
